@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Multiple Choice Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1 th:text="'Question No. ' + ${question_order_number}"></h1>
+<form action="#" th:action="@{/next_question}" th:object="${request_data}" method="post">
+    <fieldset>
+        <legend th:text="${question.get('text_intrebare')}"></legend>
+        <input type="hidden" id="answers" name="answers" th:value="${question.get('id_intrebare')}" readonly>
+        <input type="checkbox" id="answer1" th:value="${question.get('id_raspuns1')}" th:field="*{answers}">
+        <label for="answer1" th:text="${question.get('text_raspuns1')}"></label><br>
+        <input type="checkbox" id="answer2" th:value="${question.get('id_raspuns2')}" th:field="*{answers}">
+        <label for="answer2" th:text="${question.get('text_raspuns2')}"></label><br>
+        <input type="checkbox" id="answer3" th:value="${question.get('id_raspuns3')}" th:field="*{answers}">
+        <label for="answer3" th:text="${question.get('text_raspuns3')}"></label><br>
+        <input type="checkbox" id="answer4" th:value="${question.get('id_raspuns4')}" th:field="*{answers}">
+        <label for="answer4" th:text="${question.get('text_raspuns4')}"></label><br>
+        <input type="checkbox" id="answer5" th:value="${question.get('id_raspuns5')}" th:field="*{answers}">
+        <label for="answer5" th:text="${question.get('text_raspuns5')}"></label><br>
+        <input type="checkbox" id="answer6" th:value="${question.get('id_raspuns6')}" th:field="*{answers}">
+        <label for="answer6" th:text="${question.get('text_raspuns6')}"></label><br>
+    </fieldset>
+    <button type="submit" name="submit">Submit</button>
+</form>
+</body>
+</html>

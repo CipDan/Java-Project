@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Email Hasher</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Register Your Email</h1>
+<form action="#" th:action="@{/obtain_email_hashing}" th:object="${request_data}" method="post">
+    <label for="email_field">Email:</label>
+    <input type="text" id="email_field" name="email_field" placeholder="Write your email here..." th:field="*{email}" />
+    <button type="submit" name="submit">Submit</button>
+</form>
+</body>
+</html>
