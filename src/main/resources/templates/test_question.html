@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1 th:text="'Question No. ' + ${question_order_number}"></h1>
-<form action="#" th:action="@{/next_question}" th:object="${request_data}" method="post">
+<form action="#" th:action="@{/multiple_choice_test}" th:object="${request_data}" method="post">
     <fieldset>
         <legend th:text="${question.get('text_intrebare')}"></legend>
         <input type="hidden" id="answers" name="answers" th:value="${question.get('id_intrebare')}" readonly>

@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Please authenticate before taking the test!</h1>
-<form action="#" th:action="@{/next_question}" th:object="${request_data}" method="post">
+<form action="#" th:action="@{/multiple_choice_test}" th:object="${request_data}" method="post">
     <label for="email_field">Email:</label>
     <input type="text" id="email_field" name="email_field" placeholder="Enter email..." th:field="*{email}" />
     <label for="hashcode">Hashcode:</label>
