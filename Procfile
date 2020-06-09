@@ -1,0 +1,1 @@
+-Dspring.datasource.url=jdbc:oracle:thin:@192.168.100.10:1521/XE
